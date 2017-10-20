@@ -9,7 +9,7 @@ Telegram::Bot::Client.run(token) do|bot|
     	bot.api.send_message(chat_id: message.chat.id, text: "Ну здарова, #{message.from.first_name} !")
     when 'Здрасте'
     	bot.api.send_message(chat_id: message.chat.id, text: "Ну здарова")
-    	bot.api.send_message(chat_id: message.chat.id, text: "хуила.")
+    	bot.api.send_message(chat_id: message.chat.id, text: "хуила., #{message.from.first_name}")
     	
     when 'Здрасьте'
     	bot.api.send_message(chat_id: message.chat.id, text: "Ну здарова")
