@@ -5,6 +5,15 @@ Telegram::Bot::Client.run(token) do|bot|
   bot.logger.info('Бот запущен')
   bot.listen do |message|
   	case message.text
+  	when '/start'
+  		bot.api.send_message(chat_id: message.chat.id, text: "Кто ты такой ?
+
+  			Чё ты тут ваще забыл?")
+
+  	when '/кинуть орех'
+  		bot.api.send_message(chat_id: message.chat.id, text: "Аа-ай!")
+  		bot.api.send_message(chat_id: message.chat.id, text: "Больно же!")
+  		bot.api.send_message(chat_id: message.chat.id, text: "(Думает:пидрила ссаная..")")
     when 'Привет'
     	bot.api.send_message(chat_id: message.chat.id, text: "Ну здарова, #{message.from.first_name} !")
     when 'Здрасте'
